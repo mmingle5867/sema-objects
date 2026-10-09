@@ -1,5 +1,5 @@
-export interface FoundationDocumentationManifest {
-  packageName: '@selo/sema-foundation';
+export interface ObjectsDocumentationManifest {
+  packageName: '@selo/sema-objects';
   version: string;
   summary: string;
   objectContracts: string[];
@@ -7,11 +7,11 @@ export interface FoundationDocumentationManifest {
 }
 
 /** Machine-readable package documentation for SeloDoc and developer tooling. */
-export function getFoundationDocumentation(): FoundationDocumentationManifest {
+export function getObjectsDocumentation(): ObjectsDocumentationManifest {
   return {
-    packageName: '@selo/sema-foundation', version: '0.1.0',
+    packageName: '@selo/sema-objects', version: '0.1.0',
     summary: 'Portable shared business-object contracts; it does not own application workflows or persistence.',
     objectContracts: ['Organization', 'User', 'Workspace', 'Item', 'Artwork', 'Asset', 'AssetVersion', 'StorageLocation', 'Category', 'Document'],
-    documentationCapability: { capabilityKey: 'sema.documentation.foundation', operations: ['describe-package', 'list-object-contracts'] },
+    documentationCapability: { capabilityKey: 'sema.documentation.objects', operations: ['describe-package', 'list-object-contracts'] },
   };
 }

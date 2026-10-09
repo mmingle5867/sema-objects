@@ -1,3 +1,3 @@
-# SEMA Foundation
+# SEMA Objects
 
-Shared, application-neutral contracts for SEMA business objects. See `docs/FOUNDATION_SCOPE.md` and `getFoundationDocumentation()`.
+Shared, application-neutral contracts for SEMA business objects. See `docs/OBJECTS_SCOPE.md` and `getObjectsDocumentation()`.

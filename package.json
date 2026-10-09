@@ -1,13 +1,13 @@
 {
-  "name": "@selo/sema-foundation",
+  "name": "@selo/sema-objects",
   "version": "0.1.1",
   "private": true,
-  "description": "Portable SEMA Foundation contracts for shared business objects.",
+  "description": "Portable SEMA objects: shared business-object contracts.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": ["dist", "README.md", "docs"],
   "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
-  "scripts": { "build": "tsc -p tsconfig.build.json", "test": "tsx test/foundation.test.ts", "typecheck": "tsc --noEmit", "prepack": "npm run build" },
+  "scripts": { "build": "tsc -p tsconfig.build.json", "test": "tsx test/objects.test.ts", "typecheck": "tsc --noEmit", "prepack": "npm run build" },
   "devDependencies": { "tsx": "^4.19.0", "typescript": "^5.3.3" }
 }

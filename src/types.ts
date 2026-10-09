@@ -1,23 +1,23 @@
-/** Portable contracts. Persistence, UI, and application workflows remain outside Foundation. */
-export type FoundationVisibility = 'PRIVATE' | 'WORKSPACE' | 'COMPANY' | 'SEMA_WIDE';
+/** Portable contracts. Persistence, UI, and application workflows remain outside Objects. */
+export type ObjectVisibility = 'PRIVATE' | 'WORKSPACE' | 'COMPANY' | 'SEMA_WIDE';
 export type AssetKind = 'SOURCE' | 'WORKING' | 'RENDER' | 'VECTOR' | 'DOCUMENT' | 'OTHER';
 
-export interface FoundationRecord {
+export interface ObjectRecord {
   /** Permanent SEMA KeyID issued by SEMA Core. */
   id: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export interface OwnedRecord extends FoundationRecord {
+export interface OwnedRecord extends ObjectRecord {
   ownerId: string | null;
   workspaceId: string | null;
-  visibility: FoundationVisibility;
+  visibility: ObjectVisibility;
 }
 
-export interface Organization extends FoundationRecord { name: string; }
-export interface User extends FoundationRecord { displayName: string; organizationId: string | null; }
-export interface Workspace extends FoundationRecord { name: string; organizationId: string | null; }
+export interface Organization extends ObjectRecord { name: string; }
+export interface User extends ObjectRecord { displayName: string; organizationId: string | null; }
+export interface Workspace extends ObjectRecord { name: string; organizationId: string | null; }
 
 /** The durable business subject. Application-specific records extend this rather than replace it. */
 export interface Item extends OwnedRecord { title: string; description: string | null; status: string; }
@@ -38,7 +38,7 @@ export interface Asset extends OwnedRecord {
   currentVersionId: string | null;
 }
 
-export interface AssetVersion extends FoundationRecord {
+export interface AssetVersion extends ObjectRecord {
   assetId: string;
   versionNumber: number;
   locationId: string;
