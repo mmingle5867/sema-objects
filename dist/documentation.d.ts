@@ -1,5 +1,5 @@
-export interface FoundationDocumentationManifest {
-    packageName: '@selo/sema-foundation';
+export interface ObjectsDocumentationManifest {
+    packageName: '@selo/sema-objects';
     version: string;
     summary: string;
     objectContracts: string[];
@@ -9,5 +9,5 @@ export interface FoundationDocumentationManifest {
     };
 }
 /** Machine-readable package documentation for SeloDoc and developer tooling. */
-export declare function getFoundationDocumentation(): FoundationDocumentationManifest;
+export declare function getObjectsDocumentation(): ObjectsDocumentationManifest;
 //# sourceMappingURL=documentation.d.ts.map
